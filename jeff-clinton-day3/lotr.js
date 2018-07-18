@@ -32,3 +32,13 @@ const characters = [
   createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
 ];
 
+characters.push(createCharacter('Arwen Undomiel', 'Evenstar', 'Half Elf', 'Rivendell', 50, 50));
+
+characters.find(char => char.nickname === 'aragorn').describe();
+
+const justHobbits = characters.filter(char => char.race === 'Hobbit');
+console.log(justHobbits);
+
+const highAttackChars = characters.filter(char => char.attack > 5);
+console.log(highAttackChars);
+
