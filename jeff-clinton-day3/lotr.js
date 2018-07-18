@@ -25,10 +25,10 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
   };
 }
 const characters = [
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
 ];
 
