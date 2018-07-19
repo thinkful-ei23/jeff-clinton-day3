@@ -1,32 +1,17 @@
 'use strict';
 
-const cipher = {
-  a: 2,
-  b: 3,
-  c: 4,
-  d: 5
-};
-
 function decode(word) {
-  const firstChar = word[0];
-  if (firstChar === 'a') {
-    return word[cipher.a - 1];
-  } else if (firstChar === 'b') {
-    return word[cipher.b - 1];
-  } else if (firstChar === 'c') {
-    return word[cipher.c - 1];
-  } else if (firstChar === 'd') {
-    return word[cipher.d - 1];
-  } else {
-    return ' ';
-  }
+  const cipher = {a: 2, b: 3, c: 4, d: 5};
+  const first = word[0];
+  const keys = Object.keys(cipher);
+
+  return (keys.includes(first)) ? word[cipher[first] - 1] : ' ';
 }
 
 function decodeWords(message) {
-  const arr = message.split(' ');
-  let decoded = '';
-  arr.forEach(word => decoded += decode(word));
-  return decoded;
+  return message
+    .split(' ')
+    .reduce(((decoded, word) => decoded += decode(word)), '');
 }
 
 const codedMessage = 'craft block argon meter bells brown croon droop';
