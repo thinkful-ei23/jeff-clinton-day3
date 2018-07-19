@@ -25,10 +25,20 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
   };
 }
 const characters = [
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
-  createCharacter(name, nickname, race, origin, attack, defense),
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
 ];
+
+characters.push(createCharacter('Arwen Undomiel', 'Evenstar', 'Half Elf', 'Rivendell', 50, 50));
+
+characters.find(char => char.nickname === 'aragorn').describe();
+
+const justHobbits = characters.filter(char => char.race === 'Hobbit');
+console.log(justHobbits);
+
+const highAttackChars = characters.filter(char => char.attack > 5);
+console.log(highAttackChars);
 
